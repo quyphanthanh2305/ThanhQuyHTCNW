@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: auto; padding: 0px;
+        }
+        .wrapper{
+            height: 700px;
+            width: 1089px;
+            background-color: rgb(206, 134, 27);
+        
+        }
+        body{background-image: url(../HTCNW/img/pawel-czerwinski-HvJbn9HIf6U-unsplash\ \(1\).jpg)}
+        nav{
+            height: 50px;
+            width: 100%;
+            background-color: aquamarine;
+        }
+        header{
+            height: 150px;
+            width: 100%;
+            background-color: coral;
+            background-image: url(../HTCNW/img/9c0932e7-7456-0a00-5cf4-0015274a1031.jpg);
+            
+        }
+        .content{
+            height: 400px;
+            width: 100%;
+            background-color: chartreuse;
+        }
+        aside{
+            height: 100%;
+            width: 30%;
+            background-color: rgb(104, 90, 117);
+            float: left;
+        }
+        section{
+            height: 100%;
+            width: 70%;
+            background-color: darkgreen;
+            float: left;
+        }
+        h2{text-align: center;}
+        section fieldset #radNam{
+            width: 50px;
+        }
+        section fieldset #radNu{
+            width: 50px;
+        }
+
+        .menu li{
+            height: 100%;
+            float: left;
+            width: 170px;
+            list-style-type: none;
+            text-indent: 50px;
+            line-height: 50px;
+            background-color: rgb(104, 140, 155);
+        }
+        a{
+            text-decoration: none;
+            
+        }
+
+        li:hover{
+            background-color: cadetblue;
+
+        }
+        li:hover>a{
+            font-weight: bold;
+            color: darkblue;
+        }
+        .menu li .submenu{
+            display: none;
+            position: absolute;
+        }
+        .menu li:hover .submenu{
+            display: block;
+        }
+        nav span form #bntGo{
+            padding: 3px;
+            border-radius: 50%;
+        }
+        nav span form #txtEmail{
+            padding: 3px;
+            border-radius: 10%;
+        }
+
+        footer{
+            height: 130px;
+            width: 100%;
+            background-color: rgb(156, 124, 172);
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <nav>
+            <ul class="menu">
+                <li><a href="https://www.w3schools.com/default.asp">HOME</a></li>
+                <li><a href="https://www.w3schools.com/html/html_forms.asp">SERVICE</a>
+                    <ul class="submenu">
+                        <li><a href="">PHONE</a></li>
+                        <li><a href="">INTERNET</a></li>
+                        <li><a href="">TIVI</a></li>
+                    </ul>
+                </li>
+                <li><a href="https://www.w3schools.com/css/default.asp">CONTACT</a></li>
+                <li><a href="https://www.w3schools.com/js/default.asp">ABOUT</a></li>
+                <li><a href="https://www.w3schools.com/sql/default.asp">HELP</a></li>
+            </ul>
+            <span>
+                <form action="" method="post">
+                    <label for="Email"></label>
+                    <input type="email" name="txtEmail" id="txtEmail" required placeholder="nhap email" minlength="30">
+                    <input type="submit" value="GO" id="bntGo">
+                </form>
+            </span>
+        </nav>
+        <header></header>
+        <div class="content">
+            <aside>
+                <article>
+                    <h2>ÁO</h2>
+                    <img src="../HTCNW/img/áo.jpg" alt="" srcset="">
+                </article>
+                <article>
+                    <h2>QUẦN</h2>
+                    <img src="../HTCNW/img/quần.jpg" alt="" srcset="">
+                </article>
+                <article>
+                    <h2>BALO</h2>
+                    <img src="../HTCNW/img/balo.jpg" alt="" srcset="">
+                </article>
+            </aside>
+            <section>
+                <h2>ĐĂNG KÝ THÀNH VIÊN</h2>
+                <form action="dangky.php" method="post">
+                    <fieldset>
+                        <legend>Thông tin của bạn</legend>
+                        <label for="lblHoten">Họ tên:</label>
+                        <input type="text" name="txtHT" id="txtHT" required placeholder="Nhập họ tên" minlength="20"><br> <br>
+                        <label for="lblGioiTinh">Giới tính:</label>
+                        <input type="radio" name="radNam" id="radNam" value="nam"><label>Nam</label>
+                        <input type="radio" name="radNam" id="radNu" value="nu"><label>Nữ</label><br><br>
+                        <label for="NgaySinh">Ngày sinh:</label>
+                        <input type="date" name="txtDate" id="txtDate" required placeholder="Nhập ngày sinh" minlength="20"><br> <br>
+                        <label for="CMND">CMND:</label>
+                        <input type="text" name="txtCMND" id="txCMND" required placeholder="2333xxxxx" maxlength="9"><br> <br>
+                        <label for="SDT">SĐT:</label>
+                        <input type="tel" name="txtSDT" id="txSDT" required placeholder="093xxxxxxx" maxlength="10"><br> <br>
+                        <input type="submit" value="LƯU">
+                    </fieldset>
+                </form>
+                <article>
+                </article>
+            </section>    
+        </div>
+        <footer>
+            <img src="../HTCNW/img/footer.jpg" alt="">
+        </footer>
+    </div>
+</body>
+</html>
